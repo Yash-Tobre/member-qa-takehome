@@ -27,10 +27,11 @@ import os
 import spacy
 from spacy.util import is_package, get_package_path
 
-model_name = "en_core_web_sm"
-
-nlp = spacy.load("en_core_web_sm")
-
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    nlp = spacy.blank("en")
+    print("Using blank spaCy model")
 # google genai SDK optional
 try:
     import google.genai as genai

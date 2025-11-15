@@ -1,5 +1,5 @@
 import streamlit as st
-from backend import (
+from main import (
     fetch_messages, detect_person, method_rule, method_timestamp, 
     method_bm25, method_semantic, method_llm
 )

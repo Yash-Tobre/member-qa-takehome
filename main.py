@@ -29,12 +29,7 @@ from spacy.util import is_package, get_package_path
 
 model_name = "en_core_web_sm"
 
-try:
-    nlp = spacy.load(model_name)
-except OSError:
-    import subprocess
-    subprocess.run(["python", "-m", "spacy", "download", model_name], check=True)
-    nlp = spacy.load(model_name)
+nlp = spacy.load("en_core_web_sm")
 
 # google genai SDK optional
 try:

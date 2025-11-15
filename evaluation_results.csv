@@ -1,0 +1,51 @@
+question,person_detected,method,answer,relevance,consistency,completeness,final_score
+What car does John drive?,John drive,rule,,0.4971,0.8743,0.0,0.5108
+What car does John drive?,John drive,timestamp,,0.4971,0.8743,0.0,0.5108
+What car does John drive?,John drive,bm25,,0.4971,0.8743,0.0,0.5108
+What car does John drive?,John drive,semantic,,0.4971,0.8743,0.0,0.5108
+What car does John drive?,John drive,llm,The historical messages do not contain any information about a person named John or what car they drive.,1.0,0.4971,0.9,0.8291
+Did Sarah travel to Europe last year?,Sarah,rule,,0.5034,0.8759,0.0,0.5145
+Did Sarah travel to Europe last year?,Sarah,timestamp,,0.5034,0.8759,0.0,0.5145
+Did Sarah travel to Europe last year?,Sarah,bm25,,0.5034,0.8759,0.0,0.5145
+Did Sarah travel to Europe last year?,Sarah,semantic,,0.5034,0.8759,0.0,0.5145
+Did Sarah travel to Europe last year?,Sarah,llm,Estimate: The provided messages do not contain information about Sarah traveling to Europe last year.,1.0,0.5034,0.75,0.801
+Has Alex ever booked a hotel through the company?,Alex,rule,,0.5581,0.8895,0.0,0.5459
+Has Alex ever booked a hotel through the company?,Alex,timestamp,,0.5581,0.8895,0.0,0.5459
+Has Alex ever booked a hotel through the company?,Alex,bm25,,0.5581,0.8895,0.0,0.5459
+Has Alex ever booked a hotel through the company?,Alex,semantic,,0.5581,0.8895,0.0,0.5459
+Has Alex ever booked a hotel through the company?,Alex,llm,"Estimate: Based on the provided historical messages, there is no mention of Alex, either as a sender or within the content of any message, indicating a hotel booking.",1.0,0.5581,1.0,0.8674
+When did Maria last take vacation?,Maria,rule,,0.4882,0.872,0.0,0.5057
+When did Maria last take vacation?,Maria,timestamp,,0.4882,0.872,0.0,0.5057
+When did Maria last take vacation?,Maria,bm25,,0.4882,0.872,0.0,0.5057
+When did Maria last take vacation?,Maria,semantic,,0.4882,0.872,0.0,0.5057
+When did Maria last take vacation?,Maria,llm,No information is available regarding when Maria last took a vacation.,1.0,0.4882,0.55,0.7565
+Who usually handles the dinner reservations?,,rule,Can you secure us a table at Osteria Francescana next month?,0.6312,0.7456,0.55,0.6493
+Who usually handles the dinner reservations?,,timestamp,Can you secure us a table at Osteria Francescana next month?,0.6312,0.7456,0.55,0.6493
+Who usually handles the dinner reservations?,,bm25,Could you make note of my lactose intolerance in reservations?,0.631,0.6408,0.5,0.6078
+Who usually handles the dinner reservations?,,semantic,"If possible, could you get us reservations at a chef's table for an exclusive dining experience?",0.7663,0.7313,0.8,0.7625
+Who usually handles the dinner reservations?,,llm,"Estimate: Layla Kawaguchi appears to be the most frequent requester of dinner reservations, based on the provided messages.",1.0,0.6649,0.85,0.8695
+Has anyone mentioned parking issues recently?,,rule,Can you set up on-site childcare during our villa stay?,0.5616,0.6655,0.5,0.5804
+Has anyone mentioned parking issues recently?,,timestamp,Can you set up on-site childcare during our villa stay?,0.5616,0.6655,0.5,0.5804
+Has anyone mentioned parking issues recently?,,bm25,Was there a parking spot reserved for my car at the conference venue?,0.8211,0.7304,0.65,0.7597
+Has anyone mentioned parking issues recently?,,semantic,Was there a parking spot reserved for my car at the conference venue?,0.8211,0.7304,0.65,0.7597
+Has anyone mentioned parking issues recently?,,llm,"Yes, Hans Müller mentioned a parking-related query on 2025-09-30, asking about a reserved parking spot.",1.0,0.6914,0.7,0.8474
+Is there a record of flights being booked for June?,,rule,I love the Maldives; can you plan another trip there next month?,0.6401,0.7285,0.6,0.6586
+Is there a record of flights being booked for June?,,timestamp,I love the Maldives; can you plan another trip there next month?,0.6401,0.7285,0.6,0.6586
+Is there a record of flights being booked for June?,,bm25,Please always ensure a hypoallergenic room is booked for me.,0.5392,0.5904,0.5,0.5467
+Is there a record of flights being booked for June?,,semantic,Can you book a flight leaving NYC on the 22nd at around noon?,0.7389,0.6645,0.65,0.6988
+Is there a record of flights being booked for June?,,llm,"No, there is no explicit record of flights being booked for June in the provided messages.",1.0,0.6395,0.8,0.8519
+Did Sam say anything about buying a new vehicle?,Sam,rule,,0.52,0.88,0.0,0.524
+Did Sam say anything about buying a new vehicle?,Sam,timestamp,,0.52,0.88,0.0,0.524
+Did Sam say anything about buying a new vehicle?,Sam,bm25,,0.52,0.88,0.0,0.524
+Did Sam say anything about buying a new vehicle?,Sam,semantic,,0.52,0.88,0.0,0.524
+Did Sam say anything about buying a new vehicle?,Sam,llm,"No, Sam did not say anything about buying a new vehicle in the provided messages.",1.0,0.52,0.75,0.806
+Has the team talked about holiday plans?,,rule,I love the Maldives; can you plan another trip there next month?,0.6363,0.7241,0.6,0.6554
+Has the team talked about holiday plans?,,timestamp,I love the Maldives; can you plan another trip there next month?,0.6363,0.7241,0.6,0.6554
+Has the team talked about holiday plans?,,bm25,Have a limousine ready for the Vienna Walzer Gala this holiday season.,0.6343,0.6236,0.6,0.6242
+Has the team talked about holiday plans?,,semantic,Can you send us a reminder for our New Year’s Eve flight?,0.753,0.692,0.6,0.7041
+Has the team talked about holiday plans?,,llm,"Based on the historical messages provided, there is no indication that the team has talked about holiday plans. All messages are individual requests related to personal travel or events.",1.0,0.665,1.0,0.8995
+Who confirmed the restaurant booking on Friday?,,rule,I love the Maldives; can you plan another trip there next month?,0.5558,0.6883,0.6,0.6044
+Who confirmed the restaurant booking on Friday?,,timestamp,I love the Maldives; can you plan another trip there next month?,0.5558,0.6883,0.6,0.6044
+Who confirmed the restaurant booking on Friday?,,bm25,Is there a Michelin-starred restaurant available for dinner on Friday?,0.7343,0.6383,0.5,0.6587
+Who confirmed the restaurant booking on Friday?,,semantic,Can you tell me why the booking confirmation hasn't arrived yet?,0.7919,0.6512,0.55,0.7013
+Who confirmed the restaurant booking on Friday?,,llm,No one is explicitly mentioned as confirming a restaurant booking on Friday in the provided messages.,1.0,0.6595,0.8,0.8578

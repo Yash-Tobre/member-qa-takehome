@@ -1,8 +1,9 @@
 import streamlit as st
-from main import (
+from backend import (
     fetch_messages, detect_person, method_rule, method_timestamp, 
     method_bm25, method_semantic, method_llm
 )
+
 
 
 st.set_page_config(page_title="Member QA", layout="wide")

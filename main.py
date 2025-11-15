@@ -30,8 +30,15 @@ from spacy.util import is_package, get_package_path
 try:
     nlp = spacy.load("en_core_web_sm")
 except OSError:
-    nlp = spacy.blank("en")
-    print("Using blank spaCy model")
+    # Fallback to download and load
+    print("en_core_web_sm not found, attempting download.")
+    try:
+        spacy.cli.download("en_core_web_sm")
+        nlp = spacy.load("en_core_web_sm")
+    except Exception as e:
+        print(f"Failed to download spaCy model: {e}")
+        nlp = spacy.blank("en")
+        print("Using blank spaCy model")
 # google genai SDK optional
 try:
     import google.genai as genai

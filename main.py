@@ -33,7 +33,7 @@ try:
 except OSError:
     print("en_core_web_sm not found, using blank model. NER will be disabled.")
     nlp = spacy.blank("en")
-    
+
 # google genai SDK optional
 try:
     import google.genai as genai
@@ -299,7 +299,7 @@ You are a precise inference model. Answer the user's question using ONLY the his
 
     # 5. Call Gemini via google-genai
     try:
-        client = genai.Client()  # or ensure_llm()
+        client = genai.Client(api_key=api_key)  # or ensure_llm()
         response = client.models.generate_content(
             model=GEMINI_MODEL_NAME,
             contents=prompt_text,

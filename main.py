@@ -282,8 +282,9 @@ def method_llm(question, person, messages, top_k=10):
     prompt = f"""
 ### Instruction:
 You are an inference-focused reasoning model. Use the user's question and only the historical messages provided below to answer.
+Do NOT repeat the messages. Provide a single, concise answer or estimate.
 If a person is detected, use only their messages. If no person is detected, use the top {top_k} relevant messages.
-Answer succinctly. If exact information is unavailable, provide a best-effort estimate and mark it as an estimate.
+If exact information is unavailable, provide a best-effort estimate and start with the word "Estimate:".
 
 ### User Question:
 {question}
@@ -292,15 +293,16 @@ Answer succinctly. If exact information is unavailable, provide a best-effort es
 {relevant_text}
 
 ### Task:
-Provide the most likely and reasonable answer. If you are estimating, start the answer with the word "Estimate:" so callers can distinguish it.
+Provide the most likely and reasonable answer in one sentence. Do not quote or repeat the messages.
 
 ### Answer:
 """.strip()
 
+
     # call Gemini if available, otherwise produce a heuristic fallback
     try:
         client = ensure_llm()
-        response = client.models.generate_content(model=GEMINI_MODEL_NAME, contents=prompt)
+        response = client.models.generate_content(model=GEMINI_MODEL_NAME, contents=prompt,  temperature=0.0 )
         answer = (response.text or "").strip()
         if not answer:
             answer = "Estimate: No direct answer found; based on messages the best estimate is X."

@@ -1,0 +1,6 @@
+user_id,user_name,message_count,anomaly_type
+130f1fb9-2ddf-4049-ad0e-9a270f0cb561,Vikram Desai,104,high_message_count
+1a4b66ec-2fe6-46d8-9d6e-a81ec06bc5c5,Lily O'Sullivan,107,high_message_count
+a1ac663a-277a-4782-a0ba-7efdca8ae2ee,Amina Van Den Berg,103,high_message_count
+cd3a350e-dbd2-408f-afa0-16a072f56d23,Sophia Al-Farsi,106,high_message_count
+e35ed60a-5190-4a5f-b3cd-74ced7519b4a,Fatima El-Tahir,105,high_message_count

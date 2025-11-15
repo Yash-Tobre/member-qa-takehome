@@ -21,11 +21,15 @@ try:
 except Exception:
     BM25Okapi = None
 
+import spacy
+import os
+
 try:
-    import spacy
     nlp = spacy.load("en_core_web_sm")
-except Exception:
-    nlp = None
+except OSError:
+    os.system("python -m spacy download en_core_web_sm --user")
+    nlp = spacy.load("en_core_web_sm")
+
 
 # google genai SDK optional
 try:
@@ -334,7 +338,7 @@ def ask_minimal(question: str = Query(..., description="User question")):
         return {"answer": answer}
     except Exception as e:
         return {"answer": "Unknown", "error": str(e)}
-        
+
 @app.get("/ask_llm")
 def ask_llm(question: str = Query(...)):
     messages = fetch_messages()

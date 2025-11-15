@@ -249,6 +249,7 @@ from google import genai
 from google.genai import types
 
 def method_llm(question, person, messages, top_k=10):
+    api_key = os.environ.get("GEMINI_API_KEY")
     # 1. Select message pool
     if person:
         pool = [m for m in messages if person.lower() in m.get("user_name", "").lower()]

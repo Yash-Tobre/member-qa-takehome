@@ -1,51 +1,201 @@
 question,person_detected,method,answer,relevance,consistency,completeness,final_score
-What car does John drive?,John drive,rule,,0.4971,0.8743,0.0,0.5108
-What car does John drive?,John drive,timestamp,,0.4971,0.8743,0.0,0.5108
-What car does John drive?,John drive,bm25,,0.4971,0.8743,0.0,0.5108
-What car does John drive?,John drive,semantic,,0.4971,0.8743,0.0,0.5108
-What car does John drive?,John drive,llm,The historical messages do not contain any information about a person named John or what car they drive.,1.0,0.4971,0.9,0.8291
-Did Sarah travel to Europe last year?,Sarah,rule,,0.5034,0.8759,0.0,0.5145
-Did Sarah travel to Europe last year?,Sarah,timestamp,,0.5034,0.8759,0.0,0.5145
-Did Sarah travel to Europe last year?,Sarah,bm25,,0.5034,0.8759,0.0,0.5145
-Did Sarah travel to Europe last year?,Sarah,semantic,,0.5034,0.8759,0.0,0.5145
-Did Sarah travel to Europe last year?,Sarah,llm,Estimate: The provided messages do not contain information about Sarah traveling to Europe last year.,1.0,0.5034,0.75,0.801
-Has Alex ever booked a hotel through the company?,Alex,rule,,0.5581,0.8895,0.0,0.5459
-Has Alex ever booked a hotel through the company?,Alex,timestamp,,0.5581,0.8895,0.0,0.5459
-Has Alex ever booked a hotel through the company?,Alex,bm25,,0.5581,0.8895,0.0,0.5459
-Has Alex ever booked a hotel through the company?,Alex,semantic,,0.5581,0.8895,0.0,0.5459
-Has Alex ever booked a hotel through the company?,Alex,llm,"Estimate: Based on the provided historical messages, there is no mention of Alex, either as a sender or within the content of any message, indicating a hotel booking.",1.0,0.5581,1.0,0.8674
-When did Maria last take vacation?,Maria,rule,,0.4882,0.872,0.0,0.5057
-When did Maria last take vacation?,Maria,timestamp,,0.4882,0.872,0.0,0.5057
-When did Maria last take vacation?,Maria,bm25,,0.4882,0.872,0.0,0.5057
-When did Maria last take vacation?,Maria,semantic,,0.4882,0.872,0.0,0.5057
-When did Maria last take vacation?,Maria,llm,No information is available regarding when Maria last took a vacation.,1.0,0.4882,0.55,0.7565
-Who usually handles the dinner reservations?,,rule,Can you secure us a table at Osteria Francescana next month?,0.6312,0.7456,0.55,0.6493
-Who usually handles the dinner reservations?,,timestamp,Can you secure us a table at Osteria Francescana next month?,0.6312,0.7456,0.55,0.6493
-Who usually handles the dinner reservations?,,bm25,Could you make note of my lactose intolerance in reservations?,0.631,0.6408,0.5,0.6078
-Who usually handles the dinner reservations?,,semantic,"If possible, could you get us reservations at a chef's table for an exclusive dining experience?",0.7663,0.7313,0.8,0.7625
-Who usually handles the dinner reservations?,,llm,"Estimate: Layla Kawaguchi appears to be the most frequent requester of dinner reservations, based on the provided messages.",1.0,0.6649,0.85,0.8695
-Has anyone mentioned parking issues recently?,,rule,Can you set up on-site childcare during our villa stay?,0.5616,0.6655,0.5,0.5804
-Has anyone mentioned parking issues recently?,,timestamp,Can you set up on-site childcare during our villa stay?,0.5616,0.6655,0.5,0.5804
-Has anyone mentioned parking issues recently?,,bm25,Was there a parking spot reserved for my car at the conference venue?,0.8211,0.7304,0.65,0.7597
-Has anyone mentioned parking issues recently?,,semantic,Was there a parking spot reserved for my car at the conference venue?,0.8211,0.7304,0.65,0.7597
-Has anyone mentioned parking issues recently?,,llm,"Yes, Hans Müller mentioned a parking-related query on 2025-09-30, asking about a reserved parking spot.",1.0,0.6914,0.7,0.8474
-Is there a record of flights being booked for June?,,rule,I love the Maldives; can you plan another trip there next month?,0.6401,0.7285,0.6,0.6586
-Is there a record of flights being booked for June?,,timestamp,I love the Maldives; can you plan another trip there next month?,0.6401,0.7285,0.6,0.6586
-Is there a record of flights being booked for June?,,bm25,Please always ensure a hypoallergenic room is booked for me.,0.5392,0.5904,0.5,0.5467
-Is there a record of flights being booked for June?,,semantic,Can you book a flight leaving NYC on the 22nd at around noon?,0.7389,0.6645,0.65,0.6988
-Is there a record of flights being booked for June?,,llm,"No, there is no explicit record of flights being booked for June in the provided messages.",1.0,0.6395,0.8,0.8519
-Did Sam say anything about buying a new vehicle?,Sam,rule,,0.52,0.88,0.0,0.524
-Did Sam say anything about buying a new vehicle?,Sam,timestamp,,0.52,0.88,0.0,0.524
-Did Sam say anything about buying a new vehicle?,Sam,bm25,,0.52,0.88,0.0,0.524
-Did Sam say anything about buying a new vehicle?,Sam,semantic,,0.52,0.88,0.0,0.524
-Did Sam say anything about buying a new vehicle?,Sam,llm,"No, Sam did not say anything about buying a new vehicle in the provided messages.",1.0,0.52,0.75,0.806
-Has the team talked about holiday plans?,,rule,I love the Maldives; can you plan another trip there next month?,0.6363,0.7241,0.6,0.6554
-Has the team talked about holiday plans?,,timestamp,I love the Maldives; can you plan another trip there next month?,0.6363,0.7241,0.6,0.6554
-Has the team talked about holiday plans?,,bm25,Have a limousine ready for the Vienna Walzer Gala this holiday season.,0.6343,0.6236,0.6,0.6242
-Has the team talked about holiday plans?,,semantic,Can you send us a reminder for our New Year’s Eve flight?,0.753,0.692,0.6,0.7041
-Has the team talked about holiday plans?,,llm,"Based on the historical messages provided, there is no indication that the team has talked about holiday plans. All messages are individual requests related to personal travel or events.",1.0,0.665,1.0,0.8995
-Who confirmed the restaurant booking on Friday?,,rule,I love the Maldives; can you plan another trip there next month?,0.5558,0.6883,0.6,0.6044
-Who confirmed the restaurant booking on Friday?,,timestamp,I love the Maldives; can you plan another trip there next month?,0.5558,0.6883,0.6,0.6044
-Who confirmed the restaurant booking on Friday?,,bm25,Is there a Michelin-starred restaurant available for dinner on Friday?,0.7343,0.6383,0.5,0.6587
-Who confirmed the restaurant booking on Friday?,,semantic,Can you tell me why the booking confirmation hasn't arrived yet?,0.7919,0.6512,0.55,0.7013
-Who confirmed the restaurant booking on Friday?,,llm,No one is explicitly mentioned as confirming a restaurant booking on Friday in the provided messages.,1.0,0.6595,0.8,0.8578
+What messages did Thiago Monteiro send recently?,Thiago Monteiro,rule,Could you assist me in booking a suite at Hotel de Crillon in Paris for December 5th-12th?,0.5705,0.7073,0.8,0.6574
+What messages did Thiago Monteiro send recently?,Thiago Monteiro,timestamp,Could you assist me in booking a suite at Hotel de Crillon in Paris for December 5th-12th?,0.5705,0.7073,0.8,0.6574
+What messages did Thiago Monteiro send recently?,Thiago Monteiro,bm25,Your team did a spectacular job with the last-minute Paris arrangements!,0.6022,0.6358,0.55,0.6018
+What messages did Thiago Monteiro send recently?,Thiago Monteiro,semantic,The texts were received but had incorrect ticket timings this morning.,0.6913,0.6132,0.55,0.6396
+What messages did Thiago Monteiro send recently?,Thiago Monteiro,llm,"Thiago Monteiro sent messages on 2025-09-20, 2025-06-01, 2025-05-04, 2025-04-04, and 2025-03-30.",1.0,0.6086,0.55,0.7926
+Has Thiago Monteiro talked about travel?,Thiago Monteiro,rule,Could you assist me in booking a suite at Hotel de Crillon in Paris for December 5th-12th?,0.597,0.7471,0.8,0.6826
+Has Thiago Monteiro talked about travel?,Thiago Monteiro,timestamp,Could you assist me in booking a suite at Hotel de Crillon in Paris for December 5th-12th?,0.597,0.7471,0.8,0.6826
+Has Thiago Monteiro talked about travel?,Thiago Monteiro,bm25,"Make sure my suite in Bangkok has a private pool, please.",0.5964,0.6594,0.55,0.606
+Has Thiago Monteiro talked about travel?,Thiago Monteiro,semantic,"I had a great stay in Santorini, much appreciated.",0.6519,0.68,0.45,0.62
+Has Thiago Monteiro talked about travel?,Thiago Monteiro,llm,"Yes, Thiago Monteiro has discussed travel.",1.0,0.6106,0.3,0.7432
+Has Thiago Monteiro mentioned food or dinner?,Thiago Monteiro,rule,"We prefer to dine alfresco, if possible, at our preferred restaurants.",0.6611,0.7256,0.55,0.6582
+Has Thiago Monteiro mentioned food or dinner?,Thiago Monteiro,timestamp,"We prefer to dine alfresco, if possible, at our preferred restaurants.",0.6611,0.7256,0.55,0.6582
+Has Thiago Monteiro mentioned food or dinner?,Thiago Monteiro,bm25,Their attention to my food allergies was top-notch during my stay.,0.5926,0.6126,0.5,0.5801
+Has Thiago Monteiro mentioned food or dinner?,Thiago Monteiro,semantic,The meal at Alain Ducasse was just splendid—thank you greatly.,0.6845,0.6318,0.5,0.6318
+Has Thiago Monteiro mentioned food or dinner?,Thiago Monteiro,llm,"Yes, Thiago Monteiro has mentioned food and dinner.",1.0,0.6498,0.4,0.7749
+Has Thiago Monteiro discussed vehicles or parking?,Thiago Monteiro,rule,Please update my card on file to 1234-5678-9876-5432 for purchases.,0.5317,0.6722,0.5,0.5675
+Has Thiago Monteiro discussed vehicles or parking?,Thiago Monteiro,timestamp,Please update my card on file to 1234-5678-9876-5432 for purchases.,0.5317,0.6722,0.5,0.5675
+Has Thiago Monteiro discussed vehicles or parking?,Thiago Monteiro,bm25,"Make sure my suite in Bangkok has a private pool, please.",0.5558,0.603,0.55,0.5688
+Has Thiago Monteiro discussed vehicles or parking?,Thiago Monteiro,semantic,Keep us posted on any weekend luxury car meets around Los Angeles.,0.705,0.6168,0.6,0.6576
+Has Thiago Monteiro discussed vehicles or parking?,Thiago Monteiro,llm,"Yes, Thiago Monteiro has discussed vehicles.",1.0,0.5811,0.3,0.7343
+What messages did Fatima El-Tahir send recently?,Fatima El-Tahir,rule,We need access to the private lounge at Heathrow when we land.,0.53,0.6932,0.55,0.583
+What messages did Fatima El-Tahir send recently?,Fatima El-Tahir,timestamp,We need access to the private lounge at Heathrow when we land.,0.53,0.6932,0.55,0.583
+What messages did Fatima El-Tahir send recently?,Fatima El-Tahir,bm25,Can you send over alternative dates for the private cooking class?,0.5886,0.5957,0.55,0.583
+What messages did Fatima El-Tahir send recently?,Fatima El-Tahir,semantic,Please confirm the helicopter transfer to the yacht in Ibiza.,0.6191,0.6173,0.45,0.5847
+What messages did Fatima El-Tahir send recently?,Fatima El-Tahir,llm,Fatima El-Tahir sent a message expressing satisfaction with a private tour guide in Rome.,1.0,0.5669,0.65,0.8001
+Has Fatima El-Tahir talked about travel?,Fatima El-Tahir,rule,Please remember I’m allergic to shellfish when booking restaurants.,0.4946,0.6512,0.45,0.5327
+Has Fatima El-Tahir talked about travel?,Fatima El-Tahir,timestamp,Please remember I’m allergic to shellfish when booking restaurants.,0.4946,0.6512,0.45,0.5327
+Has Fatima El-Tahir talked about travel?,Fatima El-Tahir,bm25,"There's a delay in processing my loyalty points, please inquire about this.",0.5199,0.5493,0.6,0.5447
+Has Fatima El-Tahir talked about travel?,Fatima El-Tahir,semantic,Please confirm the helicopter transfer to the yacht in Ibiza.,0.669,0.6113,0.45,0.6079
+Has Fatima El-Tahir talked about travel?,Fatima El-Tahir,llm,"Yes, Fatima El-Tahir has talked about travel.",1.0,0.5445,0.35,0.7334
+Has Fatima El-Tahir mentioned food or dinner?,Fatima El-Tahir,rule,We need access to the private lounge at Heathrow when we land.,0.5346,0.688,0.55,0.5837
+Has Fatima El-Tahir mentioned food or dinner?,Fatima El-Tahir,timestamp,We need access to the private lounge at Heathrow when we land.,0.5346,0.688,0.55,0.5837
+Has Fatima El-Tahir mentioned food or dinner?,Fatima El-Tahir,bm25,Can you confirm my yacht rental for next week in Saint-Tropez?,0.6054,0.6353,0.55,0.6033
+Has Fatima El-Tahir mentioned food or dinner?,Fatima El-Tahir,semantic,Can you confirm my dinner reservation at The French Laundry for four people tonight?,0.7057,0.6464,0.7,0.6868
+Has Fatima El-Tahir mentioned food or dinner?,Fatima El-Tahir,llm,"Yes, Fatima El-Tahir has mentioned dinner.",1.0,0.5951,0.3,0.7385
+Has Fatima El-Tahir discussed vehicles or parking?,Fatima El-Tahir,rule,A private car for Milan Fashion Week is needed as soon as possible.,0.6498,0.7614,0.6,0.6733
+Has Fatima El-Tahir discussed vehicles or parking?,Fatima El-Tahir,timestamp,A private car for Milan Fashion Week is needed as soon as possible.,0.6498,0.7614,0.6,0.6733
+Has Fatima El-Tahir discussed vehicles or parking?,Fatima El-Tahir,bm25,Can you confirm my yacht rental for next week in Saint-Tropez?,0.6485,0.7611,0.55,0.6626
+Has Fatima El-Tahir discussed vehicles or parking?,Fatima El-Tahir,semantic,Can you confirm my yacht rental for next week in Saint-Tropez?,0.6485,0.7611,0.55,0.6626
+Has Fatima El-Tahir discussed vehicles or parking?,Fatima El-Tahir,llm,"Yes, Fatima El-Tahir has discussed vehicles.",1.0,0.6492,0.3,0.7548
+What messages did Amina Van Den Berg send recently?,Amina Van Den Berg,rule,My yacht should have a full crew on board ready by the 24th.,0.6324,0.6934,0.65,0.6542
+What messages did Amina Van Den Berg send recently?,Amina Van Den Berg,timestamp,My yacht should have a full crew on board ready by the 24th.,0.6324,0.6934,0.65,0.6542
+What messages did Amina Van Den Berg send recently?,Amina Van Den Berg,bm25,Send me details on luxury apartments available in Monaco for next year.,0.6,0.5961,0.6,0.5988
+What messages did Amina Van Den Berg send recently?,Amina Van Den Berg,semantic,Can you find tickets for the sold-out Adele concert in London?,0.5908,0.6034,0.55,0.5864
+What messages did Amina Van Den Berg send recently?,Amina Van Den Berg,llm,Amina Van Den Berg sent a message requesting a review of a yacht trip billing statement.,1.0,0.6139,0.7,0.8242
+Has Amina Van Den Berg talked about travel?,Amina Van Den Berg,rule,"The yacht trip was splendid, but please review the billing statement.",0.6575,0.7949,0.5,0.6672
+Has Amina Van Den Berg talked about travel?,Amina Van Den Berg,timestamp,"The yacht trip was splendid, but please review the billing statement.",0.6575,0.7949,0.5,0.6672
+Has Amina Van Den Berg talked about travel?,Amina Van Den Berg,bm25,I requested hypoallergenic bedding; has this been arranged?,0.5476,0.5284,0.4,0.5123
+Has Amina Van Den Berg talked about travel?,Amina Van Den Berg,semantic,"The yacht trip was splendid, but please review the billing statement.",0.6575,0.7949,0.5,0.6672
+Has Amina Van Den Berg talked about travel?,Amina Van Den Berg,llm,"Yes, Amina Van Den Berg has talked about travel.",1.0,0.63,0.45,0.779
+Has Amina Van Den Berg mentioned food or dinner?,Amina Van Den Berg,rule,Plan a surprise dinner for my wife's birthday at our residence on 16th.,0.6697,0.7425,0.65,0.6876
+Has Amina Van Den Berg mentioned food or dinner?,Amina Van Den Berg,timestamp,Plan a surprise dinner for my wife's birthday at our residence on 16th.,0.6697,0.7425,0.65,0.6876
+Has Amina Van Den Berg mentioned food or dinner?,Amina Van Den Berg,bm25,"Will our hotel have wheelchair access, or should we seek alternatives?",0.5793,0.5713,0.55,0.571
+Has Amina Van Den Berg mentioned food or dinner?,Amina Van Den Berg,semantic,Please arrange dinner reservations at a high-end steakhouse in Chicago.,0.7062,0.6961,0.5,0.6619
+Has Amina Van Den Berg mentioned food or dinner?,Amina Van Den Berg,llm,"Yes, Amina Van Den Berg has mentioned dinner.",1.0,0.6562,0.4,0.7769
+Has Amina Van Den Berg discussed vehicles or parking?,Amina Van Den Berg,rule,"My card was charged an incorrect amount of $1,200, please resolve this.",0.4574,0.6146,0.6,0.5331
+Has Amina Van Den Berg discussed vehicles or parking?,Amina Van Den Berg,timestamp,"My card was charged an incorrect amount of $1,200, please resolve this.",0.4574,0.6146,0.6,0.5331
+Has Amina Van Den Berg discussed vehicles or parking?,Amina Van Den Berg,bm25,"Will our hotel have wheelchair access, or should we seek alternatives?",0.624,0.5456,0.55,0.5857
+Has Amina Van Den Berg discussed vehicles or parking?,Amina Van Den Berg,semantic,Any updates on the request for a Tesla rental in Los Angeles?,0.6811,0.5922,0.6,0.6382
+Has Amina Van Den Berg discussed vehicles or parking?,Amina Van Den Berg,llm,"Yes, Amina Van Den Berg has discussed vehicles.",1.0,0.555,0.4,0.7465
+What messages did Lorenzo Cavalli send recently?,Lorenzo Cavalli,rule,Can you secure us a table at Osteria Francescana next month?,0.8498,0.7525,0.55,0.7606
+What messages did Lorenzo Cavalli send recently?,Lorenzo Cavalli,timestamp,Can you secure us a table at Osteria Francescana next month?,0.8498,0.7525,0.55,0.7606
+What messages did Lorenzo Cavalli send recently?,Lorenzo Cavalli,bm25,I'm receiving error messages while attempting payment for the villa.,0.6062,0.6915,0.5,0.6105
+What messages did Lorenzo Cavalli send recently?,Lorenzo Cavalli,semantic,I'm receiving error messages while attempting payment for the villa.,0.6062,0.6915,0.5,0.6105
+What messages did Lorenzo Cavalli send recently?,Lorenzo Cavalli,llm,Lorenzo Cavalli recently sent messages asking to secure a table at Osteria Francescana next month and if there has been confirmation of his conference itinerary yet.,1.0,0.728,1.0,0.9184
+Has Lorenzo Cavalli talked about travel?,Lorenzo Cavalli,rule,Book a romantic dinner for two at The Fat Duck on Saturday.,0.5708,0.6747,0.6,0.6078
+Has Lorenzo Cavalli talked about travel?,Lorenzo Cavalli,timestamp,Book a romantic dinner for two at The Fat Duck on Saturday.,0.5708,0.6747,0.6,0.6078
+Has Lorenzo Cavalli talked about travel?,Lorenzo Cavalli,bm25,Has there been confirmation of my conference itinerary yet?,0.6748,0.6186,0.45,0.613
+Has Lorenzo Cavalli talked about travel?,Lorenzo Cavalli,semantic,Can you review the travel plan once more and send me a summary?,0.7262,0.6526,0.65,0.6889
+Has Lorenzo Cavalli talked about travel?,Lorenzo Cavalli,llm,"Yes, Lorenzo Cavalli has talked about travel.",1.0,0.6357,0.35,0.7607
+Has Lorenzo Cavalli mentioned food or dinner?,Lorenzo Cavalli,rule,Can you secure us a table at Osteria Francescana next month?,0.6633,0.7375,0.55,0.6629
+Has Lorenzo Cavalli mentioned food or dinner?,Lorenzo Cavalli,timestamp,Can you secure us a table at Osteria Francescana next month?,0.6633,0.7375,0.55,0.6629
+Has Lorenzo Cavalli mentioned food or dinner?,Lorenzo Cavalli,bm25,Has there been confirmation of my conference itinerary yet?,0.6139,0.6119,0.45,0.5805
+Has Lorenzo Cavalli mentioned food or dinner?,Lorenzo Cavalli,semantic,Please prepare a private dining experience in Santorini for our anniversary.,0.7052,0.6739,0.55,0.6648
+Has Lorenzo Cavalli mentioned food or dinner?,Lorenzo Cavalli,llm,"Yes, Lorenzo Cavalli has mentioned dinner.",1.0,0.6614,0.3,0.7584
+Has Lorenzo Cavalli discussed vehicles or parking?,Lorenzo Cavalli,rule,Book a spa day for my wife and daughter at the Ritz-Carlton tomorrow.,0.4954,0.6725,0.65,0.5794
+Has Lorenzo Cavalli discussed vehicles or parking?,Lorenzo Cavalli,timestamp,Book a spa day for my wife and daughter at the Ritz-Carlton tomorrow.,0.4954,0.6725,0.65,0.5794
+Has Lorenzo Cavalli discussed vehicles or parking?,Lorenzo Cavalli,bm25,Has there been confirmation of my conference itinerary yet?,0.6154,0.586,0.45,0.5735
+Has Lorenzo Cavalli discussed vehicles or parking?,Lorenzo Cavalli,semantic,The yacht rental in the Mediterranean was phenomenal—great choice.,0.5775,0.5891,0.4,0.5454
+Has Lorenzo Cavalli discussed vehicles or parking?,Lorenzo Cavalli,llm,"Yes, he has discussed a vehicle.",1.0,0.5459,0.3,0.7238
+What messages did Hans Müller send recently?,Hans Müller,rule,Have the concert tickets for Sydney been confirmed?,0.6007,0.717,0.4,0.5955
+What messages did Hans Müller send recently?,Hans Müller,timestamp,Have the concert tickets for Sydney been confirmed?,0.6007,0.717,0.4,0.5955
+What messages did Hans Müller send recently?,Hans Müller,bm25,How did the arrangements for my upcoming trip to Tokyo go?,0.7194,0.7467,0.55,0.6937
+What messages did Hans Müller send recently?,Hans Müller,semantic,How did the arrangements for my upcoming trip to Tokyo go?,0.7194,0.7467,0.55,0.6937
+What messages did Hans Müller send recently?,Hans Müller,llm,"Hans Müller recently requested chauffeur confirmation for Cannes, sought TED Conference passes, and inquired about Tokyo trip arrangements.",1.0,0.6601,0.9,0.878
+Has Hans Müller talked about travel?,Hans Müller,rule,Would you book a private dining room for my meeting in Tokyo?,0.6254,0.7717,0.6,0.6642
+Has Hans Müller talked about travel?,Hans Müller,timestamp,Would you book a private dining room for my meeting in Tokyo?,0.6254,0.7717,0.6,0.6642
+Has Hans Müller talked about travel?,Hans Müller,bm25,Has the dinner reservation at La Petite Maison been confirmed?,0.601,0.6522,0.5,0.5962
+Has Hans Müller talked about travel?,Hans Müller,semantic,How did the arrangements for my upcoming trip to Tokyo go?,0.6528,0.6958,0.55,0.6451
+Has Hans Müller talked about travel?,Hans Müller,llm,"Yes, Hans Müller has talked about travel.",1.0,0.6262,0.35,0.7578
+Has Hans Müller mentioned food or dinner?,Hans Müller,rule,I'm looking for a secluded beachside retreat in the Maldives.,0.4975,0.6791,0.5,0.5524
+Has Hans Müller mentioned food or dinner?,Hans Müller,timestamp,I'm looking for a secluded beachside retreat in the Maldives.,0.4975,0.6791,0.5,0.5524
+Has Hans Müller mentioned food or dinner?,Hans Müller,bm25,Has the dinner reservation at La Petite Maison been confirmed?,0.5805,0.6998,0.5,0.6002
+Has Hans Müller mentioned food or dinner?,Hans Müller,semantic,Has the dinner reservation at La Petite Maison been confirmed?,0.5805,0.6998,0.5,0.6002
+Has Hans Müller mentioned food or dinner?,Hans Müller,llm,Yes.,1.0,0.539,0.05,0.6717
+Has Hans Müller discussed vehicles or parking?,Hans Müller,rule,Was there a parking spot reserved for my car at the conference venue?,0.735,0.8467,0.65,0.7515
+Has Hans Müller discussed vehicles or parking?,Hans Müller,timestamp,Was there a parking spot reserved for my car at the conference venue?,0.735,0.8467,0.65,0.7515
+Has Hans Müller discussed vehicles or parking?,Hans Müller,bm25,Has the dinner reservation at La Petite Maison been confirmed?,0.6272,0.6455,0.5,0.6073
+Has Hans Müller discussed vehicles or parking?,Hans Müller,semantic,Was there a parking spot reserved for my car at the conference venue?,0.735,0.8467,0.65,0.7515
+Has Hans Müller discussed vehicles or parking?,Hans Müller,llm,"Yes, Hans Müller has discussed vehicles and parking.",1.0,0.7081,0.4,0.7924
+What messages did Vikram Desai send recently?,Vikram Desai,rule,Can you make sure my ski gear is ready at my chalet this weekend?,0.5932,0.6907,0.65,0.6338
+What messages did Vikram Desai send recently?,Vikram Desai,timestamp,Can you make sure my ski gear is ready at my chalet this weekend?,0.5932,0.6907,0.65,0.6338
+What messages did Vikram Desai send recently?,Vikram Desai,bm25,Kindly send clarifications on why I was charged extra for spa service.,0.6057,0.5685,0.6,0.5934
+What messages did Vikram Desai send recently?,Vikram Desai,semantic,I'd appreciate being informed when the luggage with tracking #12837 arrives.,0.8012,0.6521,0.55,0.7062
+What messages did Vikram Desai send recently?,Vikram Desai,llm,"Vikram Desai recently appreciated a hassle-free Florence event, praised outstanding service, and requested an update on luggage tracking #12837.",1.0,0.6483,0.95,0.8845
+Has Vikram Desai talked about travel?,Vikram Desai,rule,Ensure my hotel suite includes a full kitchenette.,0.5394,0.6795,0.4,0.5535
+Has Vikram Desai talked about travel?,Vikram Desai,timestamp,Ensure my hotel suite includes a full kitchenette.,0.5394,0.6795,0.4,0.5535
+Has Vikram Desai talked about travel?,Vikram Desai,bm25,Please book me a private jet to Paris for the weekend.,0.6184,0.626,0.55,0.607
+Has Vikram Desai talked about travel?,Vikram Desai,semantic,Is there any news on the helicopter tour I asked about?,0.6809,0.6016,0.55,0.6309
+Has Vikram Desai talked about travel?,Vikram Desai,llm,"Yes, Vikram Desai has talked about travel.",1.0,0.5945,0.35,0.7484
+Has Vikram Desai mentioned food or dinner?,Vikram Desai,rule,"The restaurant recommendation in Lyon was terrific, thanks so much!",0.6566,0.7443,0.5,0.6516
+Has Vikram Desai mentioned food or dinner?,Vikram Desai,timestamp,"The restaurant recommendation in Lyon was terrific, thanks so much!",0.6566,0.7443,0.5,0.6516
+Has Vikram Desai mentioned food or dinner?,Vikram Desai,bm25,Please book me a private jet to Paris for the weekend.,0.5636,0.6141,0.55,0.576
+Has Vikram Desai mentioned food or dinner?,Vikram Desai,semantic,Can you organize a theme dinner for 10 at our Balinese villa?,0.7214,0.6702,0.6,0.6818
+Has Vikram Desai mentioned food or dinner?,Vikram Desai,llm,"Yes, Vikram Desai has mentioned dinner.",1.0,0.6496,0.3,0.7549
+Has Vikram Desai discussed vehicles or parking?,Vikram Desai,rule,The car service was impeccable—thank you for your recommendation.,0.663,0.7065,0.45,0.6334
+Has Vikram Desai discussed vehicles or parking?,Vikram Desai,timestamp,The car service was impeccable—thank you for your recommendation.,0.663,0.7065,0.45,0.6334
+Has Vikram Desai discussed vehicles or parking?,Vikram Desai,bm25,Please book me a private jet to Paris for the weekend.,0.5356,0.5774,0.55,0.551
+Has Vikram Desai discussed vehicles or parking?,Vikram Desai,semantic,Is there any news on the helicopter tour I asked about?,0.6677,0.6184,0.55,0.6294
+Has Vikram Desai discussed vehicles or parking?,Vikram Desai,llm,"Yes, Vikram Desai has discussed vehicles.",1.0,0.6323,0.3,0.7497
+What messages did Lily O'Sullivan send recently?,Lily O'Sullivan,rule,Did you change the start time for the Broadway show tickets to 7 pm?,0.5748,0.7252,0.65,0.635
+What messages did Lily O'Sullivan send recently?,Lily O'Sullivan,timestamp,Did you change the start time for the Broadway show tickets to 7 pm?,0.5748,0.7252,0.65,0.635
+What messages did Lily O'Sullivan send recently?,Lily O'Sullivan,bm25,Did I have any new messages left with the concierge service today?,0.6393,0.7414,0.6,0.6621
+What messages did Lily O'Sullivan send recently?,Lily O'Sullivan,semantic,Did I have any new messages left with the concierge service today?,0.6393,0.7414,0.6,0.6621
+What messages did Lily O'Sullivan send recently?,Lily O'Sullivan,llm,"Lily O'Sullivan sent messages on 2025-10-20, 2025-10-10, and 2025-09-17.",1.0,0.6071,0.45,0.7721
+Has Lily O'Sullivan talked about travel?,Lily O'Sullivan,rule,I really appreciated the seamless coordination during my recent Rome trip.,0.5926,0.6879,0.55,0.6127
+Has Lily O'Sullivan talked about travel?,Lily O'Sullivan,timestamp,I really appreciated the seamless coordination during my recent Rome trip.,0.5926,0.6879,0.55,0.6127
+Has Lily O'Sullivan talked about travel?,Lily O'Sullivan,bm25,Ensure the hotel room is smoke-free and has hypoallergenic bedding.,0.5393,0.5262,0.5,0.5275
+Has Lily O'Sullivan talked about travel?,Lily O'Sullivan,semantic,Please specify arrival arrangements for the family sailing adventures.,0.663,0.62,0.45,0.6075
+Has Lily O'Sullivan talked about travel?,Lily O'Sullivan,llm,"Yes, Lily O'Sullivan has discussed travel.",1.0,0.5969,0.3,0.7391
+Has Lily O'Sullivan mentioned food or dinner?,Lily O'Sullivan,rule,I'd like box seats for Kings' games this season—can you arrange it?,0.5474,0.6867,0.6,0.5997
+Has Lily O'Sullivan mentioned food or dinner?,Lily O'Sullivan,timestamp,I'd like box seats for Kings' games this season—can you arrange it?,0.5474,0.6867,0.6,0.5997
+Has Lily O'Sullivan mentioned food or dinner?,Lily O'Sullivan,bm25,Ensure the hotel room is smoke-free and has hypoallergenic bedding.,0.5553,0.5848,0.5,0.5531
+Has Lily O'Sullivan mentioned food or dinner?,Lily O'Sullivan,semantic,Last night's dinner at L'Oustau was exquisite—thanks for the suggestion.,0.6632,0.6049,0.5,0.6131
+Has Lily O'Sullivan mentioned food or dinner?,Lily O'Sullivan,llm,"Yes, Lily O'Sullivan mentioned dinner and vegan options for breakfast.",1.0,0.5783,0.5,0.7735
+Has Lily O'Sullivan discussed vehicles or parking?,Lily O'Sullivan,rule,I noticed a charge on my card from your service I didn't authorize.,0.497,0.6594,0.6,0.5663
+Has Lily O'Sullivan discussed vehicles or parking?,Lily O'Sullivan,timestamp,I noticed a charge on my card from your service I didn't authorize.,0.497,0.6594,0.6,0.5663
+Has Lily O'Sullivan discussed vehicles or parking?,Lily O'Sullivan,bm25,Ensure the hotel room is smoke-free and has hypoallergenic bedding.,0.5098,0.5537,0.5,0.521
+Has Lily O'Sullivan discussed vehicles or parking?,Lily O'Sullivan,semantic,Thanks for the exquisite car service during our Paris stay.,0.6275,0.5936,0.5,0.5918
+Has Lily O'Sullivan discussed vehicles or parking?,Lily O'Sullivan,llm,Lily O'Sullivan has discussed vehicles.,1.0,0.5328,0.25,0.7098
+What messages did Sophia Al-Farsi send recently?,Sophia Al-Farsi,rule,My direct line at work is 212-555-6051; kindly update your records.,0.5865,0.6902,0.55,0.6103
+What messages did Sophia Al-Farsi send recently?,Sophia Al-Farsi,timestamp,My direct line at work is 212-555-6051; kindly update your records.,0.5865,0.6902,0.55,0.6103
+What messages did Sophia Al-Farsi send recently?,Sophia Al-Farsi,bm25,Your team did extraordinary handling the last-minute changes—well done!,0.5327,0.5627,0.45,0.5252
+What messages did Sophia Al-Farsi send recently?,Sophia Al-Farsi,semantic,Could you get me a table for four at Osteria Francescana on April 12th?,0.6531,0.5894,0.7,0.6434
+What messages did Sophia Al-Farsi send recently?,Sophia Al-Farsi,llm,"Sophia Al-Farsi sent messages on October 19, 2025, and October 7, 2025.",1.0,0.5897,0.55,0.7869
+Has Sophia Al-Farsi talked about travel?,Sophia Al-Farsi,rule,Could you book tickets for the Milan Fashion Show next month?,0.6201,0.7228,0.55,0.6369
+Has Sophia Al-Farsi talked about travel?,Sophia Al-Farsi,timestamp,Could you book tickets for the Milan Fashion Show next month?,0.6201,0.7228,0.55,0.6369
+Has Sophia Al-Farsi talked about travel?,Sophia Al-Farsi,bm25,My assistant's contact number has changed to 647-555-9381.,0.5239,0.5418,0.4,0.5045
+Has Sophia Al-Farsi talked about travel?,Sophia Al-Farsi,semantic,Could you get me a table for four at Osteria Francescana on April 12th?,0.6543,0.6782,0.7,0.6706
+Has Sophia Al-Farsi talked about travel?,Sophia Al-Farsi,llm,"Yes, Sophia Al-Farsi has talked about travel.",1.0,0.6046,0.35,0.7514
+Has Sophia Al-Farsi mentioned food or dinner?,Sophia Al-Farsi,rule,Is there a Michelin-starred restaurant available for dinner on Friday?,0.5894,0.6962,0.5,0.6035
+Has Sophia Al-Farsi mentioned food or dinner?,Sophia Al-Farsi,timestamp,Is there a Michelin-starred restaurant available for dinner on Friday?,0.5894,0.6962,0.5,0.6035
+Has Sophia Al-Farsi mentioned food or dinner?,Sophia Al-Farsi,bm25,My assistant's contact number has changed to 647-555-9381.,0.5258,0.5344,0.4,0.5032
+Has Sophia Al-Farsi mentioned food or dinner?,Sophia Al-Farsi,semantic,Could you get me a table for four at Osteria Francescana on April 12th?,0.5688,0.6268,0.7,0.6124
+Has Sophia Al-Farsi mentioned food or dinner?,Sophia Al-Farsi,llm,Yes.,1.0,0.5683,0.05,0.6805
+Has Sophia Al-Farsi discussed vehicles or parking?,Sophia Al-Farsi,rule,I need a yacht rental in the Caribbean for a family getaway in January.,0.5501,0.6583,0.6,0.5925
+Has Sophia Al-Farsi discussed vehicles or parking?,Sophia Al-Farsi,timestamp,I need a yacht rental in the Caribbean for a family getaway in January.,0.5501,0.6583,0.6,0.5925
+Has Sophia Al-Farsi discussed vehicles or parking?,Sophia Al-Farsi,bm25,My assistant's contact number has changed to 647-555-9381.,0.5263,0.5285,0.4,0.5017
+Has Sophia Al-Farsi discussed vehicles or parking?,Sophia Al-Farsi,semantic,Could you get me a table for four at Osteria Francescana on April 12th?,0.6363,0.5937,0.7,0.6363
+Has Sophia Al-Farsi discussed vehicles or parking?,Sophia Al-Farsi,llm,Sophia Al-Farsi has discussed vehicles.,1.0,0.5657,0.25,0.7197
+What messages did Armand Dupont send recently?,Armand Dupont,rule,I love the Maldives; can you plan another trip there next month?,0.6265,0.7595,0.6,0.6611
+What messages did Armand Dupont send recently?,Armand Dupont,timestamp,I love the Maldives; can you plan another trip there next month?,0.6265,0.7595,0.6,0.6611
+What messages did Armand Dupont send recently?,Armand Dupont,bm25,Send over the final details of our Caribbean sailing itinerary.,0.7795,0.7978,0.5,0.7291
+What messages did Armand Dupont send recently?,Armand Dupont,semantic,Send over the final details of our Caribbean sailing itinerary.,0.7795,0.7978,0.5,0.7291
+What messages did Armand Dupont send recently?,Armand Dupont,llm,Estimate: Based on these messages — [2025-02-01T06:15:31.165875+00:00] Armand Dupont: Send over the final details of our Caribbean sailing itinerary. | [2025-06-12T07:38:26.159476+00:00] Armand Dupont: I'd love a personal recommendation for an art collector in Paris. | [2025-06-21T16:24:57.168397+00:00] Armand Dupont: Could you update me on the status of the Monaco yacht rental?,1.0,0.703,1.0,0.9109
+Has Armand Dupont talked about travel?,Armand Dupont,rule,I love the Maldives; can you plan another trip there next month?,0.6078,0.6664,0.6,0.6238
+Has Armand Dupont talked about travel?,Armand Dupont,timestamp,I love the Maldives; can you plan another trip there next month?,0.6078,0.6664,0.6,0.6238
+Has Armand Dupont talked about travel?,Armand Dupont,bm25,Double-check that the suite has high-speed internet and a workspace.,0.5469,0.5239,0.5,0.5306
+Has Armand Dupont talked about travel?,Armand Dupont,semantic,I'd love a personal recommendation for an art collector in Paris.,0.8325,0.6118,0.55,0.7098
+Has Armand Dupont talked about travel?,Armand Dupont,llm,Estimate: Based on these messages — [2025-06-12T07:38:26.159476+00:00] Armand Dupont: I'd love a personal recommendation for an art collector in Paris. | [2025-09-11T07:57:33.160656+00:00] Armand Dupont: Arrange a vintage car rental for my Paris visit next week. | [2025-02-01T06:15:31.165875+00:00] Armand Dupont: Send over the final details of our Caribbean sailing itinerary.,1.0,0.6488,1.0,0.8946
+Has Armand Dupont mentioned food or dinner?,Armand Dupont,rule,Kindly double-check my limo reservation in Rome for next Thursday.,0.6518,0.7173,0.5,0.6411
+Has Armand Dupont mentioned food or dinner?,Armand Dupont,timestamp,Kindly double-check my limo reservation in Rome for next Thursday.,0.6518,0.7173,0.5,0.6411
+Has Armand Dupont mentioned food or dinner?,Armand Dupont,bm25,Double-check that the suite has high-speed internet and a workspace.,0.536,0.5444,0.5,0.5313
+Has Armand Dupont mentioned food or dinner?,Armand Dupont,semantic,I'll need a gluten-free menu for my dinner reservation tomorrow night.,0.7158,0.6481,0.55,0.6623
+Has Armand Dupont mentioned food or dinner?,Armand Dupont,llm,"Yes, Armand Dupont has mentioned food and dinner.",1.0,0.6388,0.4,0.7717
+Has Armand Dupont discussed vehicles or parking?,Armand Dupont,rule,Please reserve a car service at 3 p.m. from my office.,0.6349,0.7213,0.55,0.6439
+Has Armand Dupont discussed vehicles or parking?,Armand Dupont,timestamp,Please reserve a car service at 3 p.m. from my office.,0.6349,0.7213,0.55,0.6439
+Has Armand Dupont discussed vehicles or parking?,Armand Dupont,bm25,Double-check that the suite has high-speed internet and a workspace.,0.5327,0.5544,0.5,0.5327
+Has Armand Dupont discussed vehicles or parking?,Armand Dupont,semantic,Arrange a vintage car rental for my Paris visit next week.,0.6966,0.6603,0.55,0.6564
+Has Armand Dupont discussed vehicles or parking?,Armand Dupont,llm,"Yes, Armand Dupont has discussed vehicles.",1.0,0.6248,0.3,0.7474
+What messages did Layla Kawaguchi send recently?,Layla Kawaguchi,rule,The payment of $750 seems to have been deducted twice.,0.4889,0.6358,0.5,0.5352
+What messages did Layla Kawaguchi send recently?,Layla Kawaguchi,timestamp,The payment of $750 seems to have been deducted twice.,0.4889,0.6358,0.5,0.5352
+What messages did Layla Kawaguchi send recently?,Layla Kawaguchi,bm25,Did you manage to secure the event access passes I requested?,0.5733,0.5639,0.55,0.5658
+What messages did Layla Kawaguchi send recently?,Layla Kawaguchi,semantic,"Preparations should be made for our Hawaii arrival by the 21st, including leis.",0.6106,0.5332,0.65,0.5952
+What messages did Layla Kawaguchi send recently?,Layla Kawaguchi,llm,Layla Kawaguchi recently sent a message about private yoga lessons.,1.0,0.5404,0.5,0.7621
+Has Layla Kawaguchi talked about travel?,Layla Kawaguchi,rule,I’d love to try the new fusion restaurant in Paris; could you book us a table for 8 PM?,0.5608,0.7114,0.95,0.6838
+Has Layla Kawaguchi talked about travel?,Layla Kawaguchi,timestamp,I’d love to try the new fusion restaurant in Paris; could you book us a table for 8 PM?,0.5608,0.7114,0.95,0.6838
+Has Layla Kawaguchi talked about travel?,Layla Kawaguchi,bm25,I'd like a consultation about a personalized fragrance experience.,0.5941,0.5818,0.4,0.5516
+Has Layla Kawaguchi talked about travel?,Layla Kawaguchi,semantic,Can you book a flight for 4 adults from JFK to LAX on the 22nd?,0.6552,0.6328,0.75,0.6674
+Has Layla Kawaguchi talked about travel?,Layla Kawaguchi,llm,"Yes, Layla Kawaguchi has talked about travel.",1.0,0.5927,0.35,0.7478
+Has Layla Kawaguchi mentioned food or dinner?,Layla Kawaguchi,rule,I’d love to try the new fusion restaurant in Paris; could you book us a table for 8 PM?,0.6542,0.7604,0.95,0.7452
+Has Layla Kawaguchi mentioned food or dinner?,Layla Kawaguchi,timestamp,I’d love to try the new fusion restaurant in Paris; could you book us a table for 8 PM?,0.6542,0.7604,0.95,0.7452
+Has Layla Kawaguchi mentioned food or dinner?,Layla Kawaguchi,bm25,My hotel reservation in Milan has the wrong dates; it should be from the 5th to the 9th.,0.5404,0.6076,0.8,0.6125
+Has Layla Kawaguchi mentioned food or dinner?,Layla Kawaguchi,semantic,I'd like to have my favorite chef prepare a private dinner at my,0.6828,0.6739,0.6,0.6636
+Has Layla Kawaguchi mentioned food or dinner?,Layla Kawaguchi,llm,"Yes, Layla Kawaguchi has mentioned food and dinner.",1.0,0.6329,0.4,0.7699
+Has Layla Kawaguchi discussed vehicles or parking?,Layla Kawaguchi,rule,Can you set up on-site childcare during our villa stay?,0.5162,0.6734,0.5,0.5601
+Has Layla Kawaguchi discussed vehicles or parking?,Layla Kawaguchi,timestamp,Can you set up on-site childcare during our villa stay?,0.5162,0.6734,0.5,0.5601
+Has Layla Kawaguchi discussed vehicles or parking?,Layla Kawaguchi,bm25,My hotel reservation in Milan has the wrong dates; it should be from the 5th to the 9th.,0.5115,0.5713,0.8,0.5871
+Has Layla Kawaguchi discussed vehicles or parking?,Layla Kawaguchi,semantic,Please arrange a helicopter tour over the Grand Canyon on the 21st.,0.6498,0.6056,0.55,0.6166
+Has Layla Kawaguchi discussed vehicles or parking?,Layla Kawaguchi,llm,"Yes, Layla Kawaguchi has discussed vehicles.",1.0,0.5484,0.3,0.7245

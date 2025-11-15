@@ -9,6 +9,7 @@ import logging
 import csv
 import math
 from google.genai import types
+from evaluation import evaluate_methods_dynamic
 
 # optional heavy imports
 try:
@@ -450,82 +451,10 @@ def compute_embedding_similarity(a: str, b: str):
     return jaccard(tokenize_simple(a), tokenize_simple(b))
 
 @app.get("/evaluate_methods")
-def evaluate_methods():
-    messages = fetch_messages()
-    results_rows = []
-    # iterate questions
-    for q in SAMPLE_QUESTIONS:
-        person = detect_person(q, messages)
-        # gather outputs
-        m_rule = method_rule(q, person, messages)
-        m_timestamp = method_timestamp(q, person, messages)
-        try:
-            m_bm25 = method_bm25(q, person, messages, top_k=3)
-        except Exception as e:
-            m_bm25 = {"method":"bm25", "answer": None, "error": str(e)}
-        try:
-            m_sem = method_semantic(q, person, messages, top_k=3)
-        except Exception as e:
-            m_sem = {"method":"semantic", "answer": None, "error": str(e)}
-        try:
-            m_llm = method_llm(q, person, messages, top_k=10)
-        except Exception as e:
-            m_llm = {"method":"llm", "answer": None, "error": str(e)}
-        # collect answers
-        method_answers = {
-            "rule": m_rule.get("answer"),
-            "timestamp": m_timestamp.get("answer"),
-            "bm25": m_bm25.get("answer") if isinstance(m_bm25, dict) else None,
-            "semantic": m_sem.get("answer") if isinstance(m_sem, dict) else None,
-            "llm": m_llm.get("answer") if isinstance(m_llm, dict) else None
-        }
-        # compute pairwise similarities
-        answers_list = list(method_answers.items())
-        embeddings_cache = {}
-        # compute relevance: similarity between method answer and llm answer
-        llm_ans = method_answers.get("llm") or ""
-        for name, ans in answers_list:
-            ans_text = ans or ""
-            relevance = compute_embedding_similarity(ans_text, llm_ans) if llm_ans else 0.0
-            # consistency: avg similarity between this method answer and all other method answers
-            sims = []
-            for other_name, other_ans in answers_list:
-                if other_name == name:
-                    continue
-                sims.append(compute_embedding_similarity(ans_text, other_ans or ""))
-            consistency = float(sum(sims) / len(sims)) if sims else 0.0
-            # completeness: simple heuristic based on token length (caps at 1.0)
-            length_tokens = len(tokenize_simple(ans_text))
-            completeness = min(1.0, length_tokens / 20.0)  # >=20 tokens -> 1.0
-            # final score: weighted sum (relevance 50%, consistency 30%, completeness 20%)
-            final_score = 0.5 * relevance + 0.3 * consistency + 0.2 * completeness
-            row = {
-                "question": q,
-                "person_detected": person or "",
-                "method": name,
-                "answer": ans_text,
-                "relevance": round(relevance, 4),
-                "consistency": round(consistency, 4),
-                "completeness": round(completeness, 4),
-                "final_score": round(final_score, 4)
-            }
-            results_rows.append(row)
+def evaluate_methods_endpoint():
+    return evaluate_methods_dynamic()
 
-    # write CSV
-    csv_path = os.path.join(os.getcwd(), "evaluation_results.csv")
-    fieldnames = ["question", "person_detected", "method", "answer", "relevance", "consistency", "completeness", "final_score"]
-    try:
-        with open(csv_path, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for r in results_rows:
-                writer.writerow(r)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to write CSV: {e}")
 
-    # return small preview (first 10 rows)
-    preview = results_rows[:10]
-    return {"status": "ok", "csv_path": csv_path, "rows_written": len(results_rows), "preview": preview}
 
 # ---------------------------
 # shutdown

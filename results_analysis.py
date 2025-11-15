@@ -5,7 +5,7 @@ alpha = 0.50
 beta = 0.30
 gamma = 0.20
 
-df = pd.read_csv("/Users/yashtobre/Documents/member-qa/evaluation_results.csv")
+df = pd.read_csv("evaluation_results.csv")
 
 # Compute unified evaluation metric (UEM)
 df["UEM"] = (

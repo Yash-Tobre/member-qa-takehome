@@ -24,12 +24,17 @@ except Exception:
 import spacy
 import os
 
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    os.system("python -m spacy download en_core_web_sm --user")
-    nlp = spacy.load("en_core_web_sm")
+import spacy
+from spacy.util import is_package, get_package_path
 
+model_name = "en_core_web_sm"
+
+try:
+    nlp = spacy.load(model_name)
+except OSError:
+    import subprocess
+    subprocess.run(["python", "-m", "spacy", "download", model_name], check=True)
+    nlp = spacy.load(model_name)
 
 # google genai SDK optional
 try:

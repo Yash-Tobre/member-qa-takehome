@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 import logging
 import csv
 import math
+from google.genai import types
 
 # optional heavy imports
 try:
@@ -249,24 +250,20 @@ def ensure_llm():
     GEMINI_CLIENT = genai.Client(api_key=api_key)
     logging.info("Gemini client initialized.")
     return GEMINI_CLIENT
+import logging
+from google import genai
+from google.genai import types
 
 def method_llm(question, person, messages, top_k=10):
-    """
-    Alpaca-style LLM reasoning:
-    - If person detected → use only their messages
-    - Otherwise → use top 10 most relevant messages overall
-    - Always return an answer (estimated if needed)
-    """
-    # 1. select pool
+    # 1. Select message pool
     if person:
-        pool = [m for m in messages if person.lower() in m.get("user_name","").lower()]
+        pool = [m for m in messages if person.lower() in m.get("user_name", "").lower()]
     else:
         pool = messages
-
     if not pool:
         pool = messages
 
-    # 2. rank with semantic, fallback to bm25
+    # 2. Rank with semantic, fallback to BM25
     sem = method_semantic(question, None, pool, top_k=top_k)
     hits = sem.get("hits", []) if isinstance(sem, dict) else []
     if not hits:
@@ -276,7 +273,7 @@ def method_llm(question, person, messages, top_k=10):
         except Exception:
             hits = []
 
-    # build relevant blocks
+    # 3. Build relevant blocks
     relevant_blocks = []
     for h in hits[:top_k]:
         raw = h.get("message")
@@ -287,47 +284,60 @@ def method_llm(question, person, messages, top_k=10):
 
     relevant_text = "\n".join(relevant_blocks) if relevant_blocks else "None available."
 
-    prompt = f"""
+    # 4. Build strict prompt
+    prompt_text = f"""
 ### Instruction:
-You are an inference-focused reasoning model. Use the user's question and only the historical messages provided below to answer.
-Do NOT repeat the messages. Provide a single, concise answer or estimate.
-If a person is detected, use only their messages. If no person is detected, use the top {top_k} relevant messages.
-If exact information is unavailable, provide a best-effort estimate and start with the word "Estimate:".
+You are a precise inference model. Answer the user's question using ONLY the historical messages below.
 
-### User Question:
+⚠️ IMPORTANT:
+- Do NOT repeat, quote, or paraphrase the messages.
+- Provide exactly ONE concise sentence.
+- If you must estimate, start with "Estimate:".
+
+### Question:
 {question}
 
-### Relevant Historical Messages:
+### Messages:
 {relevant_text}
-
-### Task:
-Provide the most likely and reasonable answer in one sentence. Do not quote or repeat the messages.
 
 ### Answer:
 """.strip()
 
-
-    # call Gemini if available, otherwise produce a heuristic fallback
+    # 5. Call Gemini via google-genai
     try:
-        client = ensure_llm()
-        response = client.models.generate_content(model=GEMINI_MODEL_NAME, contents=prompt,  temperature=0.0 )
-        answer = (response.text or "").strip()
-        if not answer:
-            answer = "Estimate: No direct answer found; based on messages the best estimate is X."
+        client = genai.Client()  # or ensure_llm()
+        response = client.models.generate_content(
+            model=GEMINI_MODEL_NAME,
+            contents=prompt_text,
+            config=types.GenerateContentConfig(temperature=0.0)
+        )
+        answer = response.text.strip() if response.text else "Estimate: No answer found."
         return {
             "method": "llm",
             "answer": answer,
             "used_messages": relevant_blocks,
             "person_detected": person
         }
+
     except Exception as e:
-        # fallback heuristic: synthesize a short estimate using the top hit(s)
-        logging.warning(f"LLM call failed or not available: {e}")
+        logging.warning(f"LLM call failed: {e}")
         if relevant_blocks:
             synthesized = "Estimate: Based on these messages — " + " | ".join(relevant_blocks[:3])
-            return {"method":"llm", "answer": synthesized, "used_messages": relevant_blocks, "person_detected": person, "error": str(e)}
+            return {
+                "method": "llm",
+                "answer": synthesized,
+                "used_messages": relevant_blocks,
+                "person_detected": person,
+                "error": str(e)
+            }
         else:
-            return {"method":"llm", "answer": "Estimate: No data available to infer a precise answer.", "used_messages": [], "person_detected": person, "error": str(e)}
+            return {
+                "method": "llm",
+                "answer": "Estimate: No data to infer an answer.",
+                "used_messages": [],
+                "person_detected": person,
+                "error": str(e)
+            }
 
 # ---------------------------
 # API endpoints

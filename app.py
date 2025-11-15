@@ -1,12 +1,14 @@
 import streamlit as st
-from main import fetch_messages, detect_person, method_rule, method_timestamp, method_bm25, method_semantic, method_llm
+from main import (
+    fetch_messages, detect_person, method_rule, method_timestamp, 
+    method_bm25, method_semantic, method_llm
+)
 
 st.set_page_config(page_title="Member QA", layout="wide")
 st.title("Member QA — Multi-Method Chat Assistant")
 
-# Input question
+# Input
 question = st.text_input("Ask a question about member messages:")
-
 top_k = st.slider("Top K results for BM25/Semantic/LLM:", min_value=1, max_value=10, value=3)
 
 if question:
@@ -37,14 +39,25 @@ if question:
     st.markdown(f"**Timestamp-aware:** {timestamp_res.get('answer')}")
     st.markdown(f"**BM25:** {bm25_res.get('answer')}")
     st.markdown(f"**Semantic:** {sem_res.get('answer')}")
-    st.markdown(f"**LLM:** {llm_res.get('answer')}")
 
+    # Highlight LLM answer
     st.markdown("---")
+    st.subheader("💡 LLM Best-Guess Answer")
     st.markdown(
-    """
-    **Note:**  
-    The first four methods — Rule-based, Timestamp-aware, BM25, and Semantic — typically return the most relevant historical message, but may be **irrelevant** to your question.  
-    The LLM result is a **best-effort estimate** using those messages as context.
-    """
+        f"""
+        <div style="padding:15px; background-color:#FFF3CD; border:2px solid #FFD700; border-radius:8px">
+        {llm_res.get('answer')}
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
+    # Note at the bottom
+    st.markdown("---")
+    st.markdown(
+        """
+        **Note:**  
+        The first four methods — Rule-based, Timestamp-aware, BM25, and Semantic — typically return the most relevant historical message, but may be **irrelevant** to your question.  
+        The LLM result is a **best-effort estimate** using those messages as context.
+        """
+    )

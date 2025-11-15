@@ -3,6 +3,14 @@ from main import (
     fetch_messages, detect_person, method_rule, method_timestamp, 
     method_bm25, method_semantic, method_llm
 )
+import spacy
+try:
+    nlp = spacy.load("en_core_web_sm")
+except:
+    import spacy.cli
+    spacy.cli.download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
 
 st.set_page_config(page_title="Member QA", layout="wide")
 st.title("Member QA — Multi-Method Chat Assistant")
